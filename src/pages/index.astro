@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../layouts/base.astro';
 import projects from '../data/projects.json';
-import VideoCard1 from '../components/video-card_1.astro';
-import VideoCard2 from '../components/video-card_2.astro';
+import VideoGross from '../components/vimeo640.astro';
+import VideoKlein from '../components/vimeo320.astro';
 ---
 
 <BaseLayout title="Portfolio">
@@ -12,7 +12,7 @@ import VideoCard2 from '../components/video-card_2.astro';
   <div class="projects-grid">
     {projects.map(project => (
 	  <h2><a href={`/projects/${project.slug}`}>{project.title}</a></h2>
-      <VideoCard2 project={project} />
+      <VideoKlein project={project} />
     ))}
   </div>
 

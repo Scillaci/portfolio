@@ -22,5 +22,11 @@
     "title": "Die besten Filme aller Zeiten",
     "thumbnail": "/images/BFAZ.jpg",
     "videos": ["https://vimeo.com/225843183"]
+  },
+  {
+    "slug": "wild-ones",
+    "title": "Wild Ones",
+    "thumbnail": "/images/WildOnes.jpg",
+    "videos": ["https://vimeo.com/225824025"]
   }
 ]
