@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/base.astro';
+import projects from '../data/projects.json';
+import VideoCard1 from '../components/video-card_1.astro';
+import VideoCard2 from '../components/video-card_2.astro';
+---
+
+<BaseLayout title="Portfolio">
+
+  <h1>Portfolio</h1>
+
+  <div class="projects-grid">
+    {projects.map(project => (
+      <VideoCard2 project={project} />
+    ))}
+  </div>
+
+</BaseLayout>
+

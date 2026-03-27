@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/base.astro';
+import projects from '../../data/projects.json';
+import VideoCard1 from '../../components/video-card_1.astro';
+import VideoCard2 from '../../components/video-card_2.astro';
+
+export async function getStaticPaths() {
+  return projects.map(project => ({
+    params: { slug: project.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = projects.find(p => p.slug === slug);
+---
+
+<BaseLayout title={project.title}>
+
+  <h1>{project.title}</h1>
+
+  <div class="projects-single">
+    {project.videos.map(video => (
+      <VideoCard1 project={project} />
+    ))}
+  </div>
+
+</BaseLayout>
+

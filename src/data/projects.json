@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "Masked Singer",
+    "title": "Masked Singer",
+    "thumbnail": "/images/reel-thumb.jpg",
+    "videos": ["https://vimeo.com/123456789"]
+  },
+  {
+    "slug": "Follow the Steps",
+    "title": "Follow the Steps",
+    "thumbnail": "/images/Follow_the_Steps.jpg",
+    "videos": ["https://vimeo.com/226102922"]
+  },
+  {
+    "slug": "Megablockbuster",
+    "title": "Megablockbuster",
+    "thumbnail": "/images/Megablockbuster.jpg",
+    "videos": ["https://vimeo.com/31299591"]
+  }
+]
