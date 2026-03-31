@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../../layouts/base.astro';
-import projects from '../../data/projects.json';
-import VideoGross from '../../components/vimeo640.astro';
+import projects from '../../data/project_list.json';
+import Vimeo from '../../components/vimeo.astro';
+import Details from '../../components/details.astro';
+import Thumbs from '../../components/thumbs.astro';
 
 export async function getStaticPaths() {
   return projects.map(project => ({
@@ -11,16 +13,43 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 const project = projects.find(p => p.slug === slug);
+
+if (!project) {
+  throw new Error(`Project not found: ${slug}`);
+}
 ---
 
 <BaseLayout title={project.title}>
 
-  <h1>{project.title}</h1>
+  <div class="page">
+    <div class="title">
 
-  <div class="projects-single">
-    {project.videos.map(video => (
-      <VideoGross project={project} />
-    ))}
+      <div class="back_icon">
+        <a href="/" title="back">
+          <img class="back" src="/icon/arrow_icon.svg" alt="back" />
+        </a>      
+      </div>
+      
+      <div>
+        <h1>{project.title}</h1>
+        <h2>{project.subtitle}</h2>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <div class="main">
+        <Vimeo project={project} />
+      </div>
+ 
+      <Details 
+        project={project} 
+        detailsId={`details-${project.slug}`} 
+      />
+
+      <Thumbs thumbs={project.thumbs} />
+
+    </div>
   </div>
 
 </BaseLayout>

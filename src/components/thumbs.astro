@@ -1,0 +1,21 @@
+---
+interface Props {
+  thumbs?: string[];
+  projects?: string[];
+}
+
+const { thumbs = [] } = Astro.props;
+---
+
+<div class="thumbs">
+
+  {thumbs.map((image: string) => (
+    <img 
+      src={image} 
+      alt="" 
+      loading="lazy" 
+    />
+  ))}
+</div>
+
+

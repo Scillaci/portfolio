@@ -1,0 +1,33 @@
+---
+interface Props {
+  project: {
+    videos?: string[];
+    poster?: string;
+    title: string;
+  };
+}
+
+const { project } = Astro.props as Props;
+const video = project.videos?.[0];
+---
+
+<div class="vimeo">
+  {project.poster && (
+    <img
+      class="poster"
+      src={project.poster}
+      alt={project.title}
+    />
+  )}
+
+<!--
+  {video && (
+    <iframe
+      class="vimeo-embed"
+      src={`https://player.vimeo.com/video/${video}?title=0&byline=0&portrait=0&loop=1`}
+      allowfullscreen
+    ></iframe>
+  )}
+-->
+
+</div>

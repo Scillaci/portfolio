@@ -7,16 +7,22 @@ import '../styles/global.css';
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <link rel="icon" href="/M-Icon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/M-Icon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="../icon/M-Icon.svg" type="image/svg+xml" />
   </head>
 
   <body>
     <header>
+
+      <div id="logo_div">
+     	  <a href="../index.html" title="Michael Schillack">
+        <img id="logo" src="/icon/M-Icon.svg"></a>
+      </div>
+
       <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
+        <!-- <a href="/">Home</a> -->
+        <!-- <a href="/about">About</a> -->
       </nav>
+
     </header>
 
     <main>
@@ -24,7 +30,13 @@ import '../styles/global.css';
     </main>
 
     <footer>
-      <p>© 2026</p>
+      <!-- <p>© 2026</p> -->
     </footer>
+
+    <script is:inline src="/scripts/scrollY.js"></script>
+    <script is:inline src="/scripts/toggleActive.js"></script>
+    <script is:inline src="/scripts/videoLoad.js"></script>
+    <script is:inline src="/scripts/toggleIndex.js"></script>
+
   </body>
 </html>

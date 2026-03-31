@@ -1,0 +1,69 @@
+---
+import type { Project } from '../types/project';
+
+const { project, detailsId } = Astro.props as {
+  project: Project;
+  detailsId?: string;
+};
+
+const id = detailsId ?? `details-${project.slug}`;
+
+const rows = [
+  { label: "client", value: project.client },
+  { label: "role", value: project.role?.join(" | ") },
+  ...(project.collaborators ?? []).map((item) => ({
+    label: item.title,
+    value: item.name
+  })),
+  { label: "year", value: project.year }
+].filter((row) => row.value);
+---
+<!-- Dies ist ein HTML-Kommentar 
+<div class="case">
+
+  {project.overview?.map((text) => (
+    <p class="overview">{text}</p>
+  ))}
+
+
+
+
+  <div class="details">
+    <div class="arrow_icon">
+      <a
+        href="#" class="js-toggle" title="Details"
+        data-toggle={`this .arrow, #${id}`}>
+        <img class="arrow" src="/icon/arrow_icon.svg" alt="arrow" />
+        
+      </a>
+    </div>
+
+    <h3>Details</h3>
+
+  </div>
+
+
+
+
+    <div id={id} class="details_hidden">
+      <div class="details_inner">
+
+        {project.overview?.map((text) => (
+          <p class="overview_m">{text}</p>
+        ))}
+
+        {rows.map((row) => (
+          <>
+            <h4>{row.label}</h4>
+            <p>{row.value}</p>
+          </>
+        ))}
+      </div>
+    </div>
+
+
+
+
+</div>
+
+-->

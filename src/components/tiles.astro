@@ -1,0 +1,25 @@
+---
+import type { Project } from '../types/project';
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props as Props;
+---
+
+<div class="thumbs">
+  {projects.map((project) => (
+    <article class="project-item">
+      <h2>
+        <a href={`/projects/${project.slug}`}>{project.title}</a>
+      </h2>
+
+      <img 
+        src={project.poster}
+        alt={project.title}
+        loading="lazy" 
+    />
+    </article>
+  ))}
+</div>

@@ -1,20 +1,32 @@
 ---
 import BaseLayout from '../layouts/base.astro';
-import projects from '../data/projects.json';
-import VideoGross from '../components/vimeo640.astro';
-import VideoKlein from '../components/vimeo320.astro';
+import projects from '../data/project_list.json';
+import Main from '../components/main.astro';
+
+const featuredProjects = projects.filter((project) => project.featured);
+const currentIndex = 0;
+const featuredProject = featuredProjects[currentIndex];
 ---
 
 <BaseLayout title="Portfolio">
 
-  <h1>Portfolio</h1>
+  <div
+      id="featured-data"
+      data-projects={JSON.stringify(featuredProjects)}
+      data-current-index={currentIndex}
+      hidden>
+  </div>
 
-  <div class="projects-grid">
-    {projects.map(project => (
-	  <h2><a href={`/projects/${project.slug}`}>{project.title}</a></h2>
-      <VideoKlein project={project} />
-    ))}
+  <div class="page">
+
+      {featuredProject && (
+        <Main 
+          project={featuredProject} 
+          projects={projects}
+          featuredProjects={featuredProjects}
+          currentIndex={currentIndex}
+          />)}
+
   </div>
 
 </BaseLayout>
-
