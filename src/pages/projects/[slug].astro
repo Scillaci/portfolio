@@ -19,6 +19,7 @@ const { project } = Astro.props as { project: Project };
 ---
 
 <BaseLayout title={project.title}>
+
   <div class="page">
     <div class="title">
       <div class="title-line-1">
@@ -55,4 +56,5 @@ const { project } = Astro.props as { project: Project };
       <Thumbs thumbs={project.thumbs ?? []} />
     </div>
   </div>
+  
 </BaseLayout>

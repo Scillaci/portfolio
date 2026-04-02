@@ -198,7 +198,7 @@ body.scrolled #logo:hover {
     align-items: flex-start;
     width: calc(var(--Fontsize-h1)*0.75);
     height: calc(var(--Fontsize-h1)*0.75);
-    margin-top: calc(var(--Fontsize-h1)*0.1);
+    margin-top: calc(var(--Fontsize-h1)*0.11);
 }
 
 .back, .left, .right {
@@ -370,6 +370,14 @@ body.scrolled #logo:hover {
     font-size: var(--Fontsize-small-1);
 }
 
+.featured-details {
+  margin-top: var(--Space-standard);
+}
+
+.featured-details .case {
+  margin-top: 0;
+}
+
 @media (min-width: 768px) {
 
     .case {
@@ -397,6 +405,11 @@ body.scrolled #logo:hover {
     .overview_m {
         display: none;
 }
+
+.featured-details {
+  margin-top: 0;
+}
+
 }
 
 
