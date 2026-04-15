@@ -40,11 +40,11 @@ function matchesFilters(element, activeCategoryFilters, activeExpertiseFilters) 
 
   const categoryMatch =
     activeCategoryFilters.length === 0 ||
-    activeCategoryFilters.some((filter) => elementCategories.includes(filter));
+    activeCategoryFilters.every((filter) => elementCategories.includes(filter));
 
   const expertiseMatch =
     activeExpertiseFilters.length === 0 ||
-    activeExpertiseFilters.some((filter) => elementExpertise.includes(filter));
+    activeExpertiseFilters.every((filter) => elementExpertise.includes(filter));
 
   return categoryMatch && expertiseMatch;
 }

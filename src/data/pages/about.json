@@ -1,0 +1,19 @@
+{
+  "title": "About",
+  "subtitle": "",
+  "sections": [
+    {
+      "headline": "Über mich",
+      "text": [
+        "Hier steht dein Text.",
+        "Noch ein Absatz."
+      ]
+    },
+    {
+      "headline": "",
+      "text": [
+        ""
+      ]
+    }
+  ]
+}

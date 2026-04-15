@@ -1,0 +1,36 @@
+.info-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin-bottom: calc(var(--space-standard) * 2);
+}
+
+.info-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-black);
+  opacity: var(--opacity-low);
+  pointer-events: none;
+}
+
+.info-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: var(--back-icon-size);
+}
+
+.info-section p:last-child {
+  margin-bottom: calc(var(--space-standard) * 2);
+}
+
+@media (min-width: 1024px) {
+
+  .info-frame {
+    margin-bottom: var(--space-standard);
+  }
+}
+

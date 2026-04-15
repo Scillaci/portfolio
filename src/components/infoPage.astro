@@ -1,0 +1,49 @@
+---
+import Bottom from './bottom.astro';
+
+interface Section {
+  headline?: string;
+  text?: string[];
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  sections?: Section[];
+}
+
+const {
+  title,
+  subtitle = '',
+  sections = []
+} = Astro.props as Props;
+---
+
+<div class="page">
+  <div class="title">
+    <div class="main-title">
+      <h1 class="featured-title">{title}</h1>
+      <h2 class="featured-subtitle">{subtitle}</h2>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="main">
+      <div class="info-frame">
+        <div class="info-scroll">
+          {sections.map((section) => (
+            <section class="info-section">
+              {section.headline && <h3>{section.headline}</h3>}
+
+              {section.text?.map((paragraph) => (
+                <p>{paragraph}</p>
+              ))}
+            </section>
+          ))}
+        </div>
+      </div>
+
+      <Bottom />
+    </div>
+  </div>
+</div>

@@ -2,22 +2,22 @@
   "about": [
     {
       "label": "About",
-      "href": "/about.html"
+      "href": "/about"
     },
     {
       "label": "Contact",
-      "href": "/contact.html"
+      "href": "/contact"
     }
   ],
   
   "legal": [
     {
       "label": "Impressum",
-      "href": "/impressum.html"
+      "href": "/impressum"
     },
     {
       "label": "Datenschutz",
-      "href": "/privacy.html"
+      "href": "/datenschutz"
     }
   ]
 }

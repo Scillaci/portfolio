@@ -1,0 +1,20 @@
+{
+  "title": "Impressum",
+  "subtitle": "",
+  "sections": [
+    {
+      "headline": "",
+      "text": [
+        "Max Mustermann",
+        "Straße 1",
+        "12345 Stadt"
+      ]
+    },
+    {
+      "headline": "",
+      "text": [
+        ""
+      ]
+    }
+  ]
+}

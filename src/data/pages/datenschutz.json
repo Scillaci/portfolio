@@ -1,0 +1,19 @@
+{
+  "title": "Datenschutz",
+  "subtitle": "",
+  "sections": [
+    {
+      "headline": "1. Datenschutz auf einen Blick",
+      "text": [
+        "Hier kommt dein erster Absatz rein.",
+        "Hier kann ein zweiter Absatz stehen."
+      ]
+    },
+    {
+      "headline": "2. Allgemeine Hinweise",
+      "text": [
+        "Hier folgt der nächste Abschnitt."
+      ]
+    }
+  ]
+}

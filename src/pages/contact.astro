@@ -1,36 +1,13 @@
 ---
 import BaseLayout from '../layouts/base.astro';
-import Bottom from '../components/bottom.astro';
+import InfoPage from '../components/infoPage.astro';
+import page from '../data/pages/contact.json';
 ---
 
-<BaseLayout >
-
-  <div class="page">
-    
-    <div class="title">
-      <div class="main-title">
-
-        <h1 class="featured-title">
-          Contact
-        </h1>
-
-        <h2 class="featured-subtitle"></h2> 
-
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="main">
-
-        <div class="vimeo">
-          <div class="background"></div>
-        </div>
-
-        <Bottom />
-
-      </div>
-    </div>
-
-  </div>
-  
+<BaseLayout title={page.title}>
+  <InfoPage
+    title={page.title}
+    subtitle={page.subtitle}
+    sections={page.sections}
+  />
 </BaseLayout>

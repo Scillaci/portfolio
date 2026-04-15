@@ -58,7 +58,8 @@ ol {
 @media (hover: hover) and (pointer: fine) {
   html,
   .navigation,
-  .navigation-menu {
+  .navigation-menu,
+  .info-scroll {
     scrollbar-gutter: stable;
   }
 
